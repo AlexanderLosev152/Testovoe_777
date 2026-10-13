@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ананасовый улун — Teaboom</title>
+  <meta name="description" content="Ананасовый улун: полуферментированный чай с ароматом спелого ананаса. Фасовки от 100 г до 5 кг.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/product.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <nav class="breadcrumbs" aria-label="Навигация">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Улун</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Ананасовый улун</li>
+      </ol>
+    </nav>
+
+    <article class="product" data-product>
+      <header class="product__header">
+        <a class="product__category" href="#">Улун ароматизированный</a>
+        <h1 class="product__title">Ананасовый улун</h1>
+      </header>
+
+      <figure class="product__media">
+        <span class="product__badge" data-product-discount>−7%</span>
+        <img
+          class="product__image"
+          src="img/ananasovij-ulun.svg"
+          alt="Листовой чай «Ананасовый улун» в пиале рядом с долькой ананаса"
+          width="600"
+          height="600"
+        >
+      </figure>
+
+      <div class="product__buy">
+        <form class="product__form" data-product-form>
+          <fieldset class="weights">
+            <legend class="weights__legend">Фасовка</legend>
+            <div class="weights__list">
+              <label class="weights__option">
+                <input class="weights__input" type="radio" name="weight" value="100"
+                       data-sku="01306" data-price="326.40" data-old-price="349.20" checked>
+                <span class="weights__label">100 г</span>
+              </label>
+              <label class="weights__option">
+                <input class="weights__input" type="radio" name="weight" value="500"
+                       data-sku="01307" data-price="1432" data-old-price="1646">
+                <span class="weights__label">500 г</span>
+              </label>
+              <label class="weights__option">
+                <input class="weights__input" type="radio" name="weight" value="1000"
+                       data-sku="01308" data-price="2064" data-old-price="2592">
+                <span class="weights__label">1000 г</span>
+              </label>
+              <label class="weights__option">
+                <input class="weights__input" type="radio" name="weight" value="5000"
+                       data-sku="01309" data-price="6320" data-old-price="8710">
+                <span class="weights__label">5000 г</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <p class="product__sku">Артикул: <span data-product-sku>01306</span></p>
+
+          <div class="price" aria-live="polite">
+            <p class="price__current">
+              <span class="visually-hidden">Цена:</span>
+              <data data-product-price value="326.40">326,40&nbsp;₽</data>
+            </p>
+            <p class="price__old" data-product-old-wrap>
+              <span class="visually-hidden">Старая цена:</span>
+              <s><data data-product-old-price value="349.20">349,20&nbsp;₽</data></s>
+            </p>
+            <p class="price__unit" data-product-unit>326,40&nbsp;₽ за 100&nbsp;г</p>
+          </div>
+
+          <button class="button product__cart" type="submit" data-product-cart>
+            <svg class="button__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 6h15l-1.5 9h-12L6 6Zm0 0L5 3H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+              <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+            </svg>
+            <span data-product-cart-text>В корзину</span>
+          </button>
+        </form>
+      </div>
+
+      <section class="product__about" aria-labelledby="about-title">
+        <h2 class="product__subtitle" id="about-title">О чае</h2>
+        <p class="product__text">
+          Светлый улун с яркими тропическими нотами. Плотно скрученные листья раскрываются
+          постепенно, а настой получается золотистым, с сочным ароматом спелого ананаса,
+          мягкой сливочной сладостью и цветочным послевкусием. Хорош как горячим,
+          так и в качестве основы для холодного чая.
+        </p>
+        <dl class="specs">
+          <div class="specs__row">
+            <dt class="specs__term">Температура</dt>
+            <dd class="specs__value">85–90&nbsp;°C</dd>
+          </div>
+          <div class="specs__row">
+            <dt class="specs__term">Время</dt>
+            <dd class="specs__value">2–3 мин</dd>
+          </div>
+          <div class="specs__row">
+            <dt class="specs__term">Пропорция</dt>
+            <dd class="specs__value">5&nbsp;г на 300&nbsp;мл</dd>
+          </div>
+        </dl>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
