@@ -20,17 +20,19 @@
   };
 
   // Форматирование цен
-  const numberFormat = new Intl.NumberFormat('ru-RU', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2,
-  });
-
   const formatPrice = (value) => {
     const price = Number(value);
 
-    return Number.isFinite(price)
-      ? `${numberFormat.format(price)}\u00A0₽`
-      : '—';
+    if (!Number.isFinite(price)) {
+      return '—';
+    }
+
+    const numberFormat = new Intl.NumberFormat('ru-RU', {
+      minimumFractionDigits: Number.isInteger(price) ? 0 : 2,
+      maximumFractionDigits: 2,
+    });
+
+    return `${numberFormat.format(price)}\u00A0₽`;
   };
 
   // Данные выбранной фасовки
